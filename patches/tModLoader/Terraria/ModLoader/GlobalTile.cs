@@ -8,6 +8,8 @@ namespace Terraria.ModLoader;
 
 /// <summary>
 /// This class allows you to modify the behavior of any tile in the game. Create an instance of an overriding class then call Mod.AddGlobalTile to use this.
+/// Note that these methods are called for all tile modifications, so performance should be kept in mind.
+/// Do NOT use this class if you only need to modify behavior for specific tile types! Use ModTile instead.
 /// </summary>
 public abstract class GlobalTile : GlobalBlockType
 {
