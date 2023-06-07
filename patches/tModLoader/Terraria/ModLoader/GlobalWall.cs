@@ -2,6 +2,8 @@ namespace Terraria.ModLoader;
 
 /// <summary>
 /// This class allows you to modify the behavior of any wall in the game (although admittedly walls don't have much behavior). Create an instance of an overriding class then call Mod.AddGlobalWall to use this.
+/// Note that these methods are called for all wall modifications, so performance should be kept in mind.
+/// Do NOT use this class if you only need to modify behavior for specific wall types! Use ModWall instead.
 /// </summary>
 public abstract class GlobalWall : GlobalBlockType
 {

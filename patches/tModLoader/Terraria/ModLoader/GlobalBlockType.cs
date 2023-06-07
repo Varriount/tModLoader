@@ -3,7 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Terraria.ModLoader;
 
 /// <summary>
-/// This is the superclass for GlobalTile and GlobalWall, combining common code
+/// This is the superclass for GlobalTile and GlobalWall, combining common code.
+/// Note that these methods are called for all block modifications, so performance should be kept in mind.
+/// Do NOT use this class if you only need to modify behavior for specific block types! Use ModBlockType instead.
 /// </summary>
 public abstract class GlobalBlockType : ModType
 {
